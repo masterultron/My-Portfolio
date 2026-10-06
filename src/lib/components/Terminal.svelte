@@ -64,7 +64,7 @@
     contact: () => [
       '📬 Contact',
       '──────────────────────────────────────',
-      'Email    : abduurrahamanjamiu75@outlook.com',
+      'Email    : abdurrahamanjamiu75@outlook.com',
       'GitHub   : github.com/masterultron',
       'Instagram: @theeabdurrahaman.dev',
       'LinkedIn : linkedin.com/in/abdurrahaman-jamiu-14131524b',
@@ -108,9 +108,11 @@
   '  • Built automated Excel-based school fees system'
 ],
     education: () => [
-  '🎓 Education',
+  'Education',
   '──────────────────────────────────────',
-  'B.Eng. Computer Engineering (2018–2025)',
+  
+  'UNDERGRAD',
+  'B.Eng. Computer Engineering (November 2018 – February 2025)',
   'Federal University of Technology, Minna',
   'Grade: Second Class Upper Honors',
   '',
@@ -121,6 +123,20 @@
   'Modules:',
   '  Machine Learning, Control Systems, Automation, Embedded Systems',
   '',
+
+
+  'POSTGRADUATE',
+  'MSc. Data Science and AI (September 2026 -  Present)',
+  'Middlesex University Dubai',
+  '',
+  'Thesis:',
+  'In Progress...',
+  '',
+  'Modules:',
+  '  Machine Learning and AI Algorithms, Ethics, Privacy, and Security in Data Science and AI, Applied Data Science Life Cycle',
+  '',
+
+
   'Certifications:',
   '▸ Software Engineering - ALX',
   '▸ HNG Frontend Wizard (Stage 5)',
@@ -131,7 +147,7 @@
       lines = [];
       return '';
     },
-    whoami: () => 'Abdurrahaman — frontend engineer',
+    whoami: () => 'Abdurrahaman — Software engineer and Aspiring Data Scientist/Analyst',
     date: () => new Date().toString(),
     pwd: () => '/home/Abdurrahaman/portfolio',
     ls: () => ['about.txt', 'projects/', 'skills.json', 'resume.pdf', 'contact.md'],

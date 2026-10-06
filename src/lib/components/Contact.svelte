@@ -1,4 +1,11 @@
 <script lang="ts">
+  import Mail from '~icons/lucide/mail';
+  import Check from '~icons/lucide/check';
+  import ArrowRight from '~icons/lucide/arrow-right';
+  import GitHub from '~icons/simple-icons/github';
+  import LinkedIn from '~icons/simple-icons/linkedin';
+  import Instagram from '~icons/simple-icons/instagram';
+
   // Svelte 5 State Runes
   let name = $state('');
   let email = $state('');
@@ -110,13 +117,14 @@
           class="w-full py-5 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-70 text-white text-xl font-black rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 shadow-2xl shadow-indigo-500/40"
         >
           {#if status === 'sending'}
-            <div class="w-6 h-6 border-3 border-white border-t-transparent rounded-full animate-spin" />
+            <div class="w-6 h-6 border-3 border-white border-t-transparent rounded-full animate-spin"></div>
             Sending...
           {:else if status === 'success'}
-            <span>✅ Message Sent</span>
+            <Check class="w-6 h-6" />
+            <span>Message Sent</span>
           {:else}
             <span>Send Message</span>
-            <span class="text-2xl">→</span>
+            <ArrowRight class="w-6 h-6" />
           {/if}
         </button>
       </form>
@@ -124,10 +132,10 @@
       <!-- Social Links -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full max-w-4xl">
         {#each [
-          { icon: '✉️', label: 'Email', value: 'Mail', href: 'mailto:abdurrahamanjamiu75@outlook.com' },
-          { icon: '💼', label: 'LinkedIn', value: 'LinkedIn', href: 'https://www.linkedin.com/in/abdurrahaman-jamiu-14131524b/' },
-          { icon: '📸', label: 'Instagram', value: 'Instagram', href: 'https://www.instagram.com/theeabdurrahaman.dev?igsh=M3l2eHIyMWtra2hn&utm_source=qr' },
-          { icon: '⌨️', label: 'GitHub', value: 'GitHub', href: 'https://github.com/masterultron' },
+          { label: 'Email', value: 'MAIL', href: 'mailto:abdurrahamanjamiu75@outlook.com', icon: Mail },
+          { label: 'LinkedIn', value: 'LinkedIn', href: 'https://www.linkedin.com/in/abdurrahaman-jamiu-14131524b/', icon: LinkedIn },
+          { label: 'Instagram', value: 'Instagram', href: 'https://www.instagram.com/theeabdurrahaman.dev?igsh=M3l2eHIyMWtra2hn&utm_source=qr', icon: Instagram },
+          { label: 'GitHub', value: 'GitHub', href: 'https://github.com/masterultron', icon: GitHub },
         ] as item}
           <a
             href={item.href}
@@ -135,7 +143,7 @@
             rel="noopener noreferrer"
             class="flex flex-col items-center text-center gap-3 p-6 bg-slate-50 dark:bg-slate-900/30 rounded-[2rem] hover:bg-white dark:hover:bg-slate-800 transition-all border border-transparent hover:border-slate-200 dark:hover:border-slate-700 group hover:shadow-xl"
           >
-            <span class="text-3xl mb-1">{item.icon}</span>
+            <item.icon class="w-8 h-8 mb-1 text-slate-600 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
             <div>
               <p class="text-[10px] text-slate-400 uppercase tracking-widest font-black mb-1">{item.label}</p>
               <p class="text-base text-slate-700 dark:text-slate-300 font-bold group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">

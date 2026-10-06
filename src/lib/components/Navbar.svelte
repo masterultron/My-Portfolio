@@ -2,6 +2,8 @@
   import { theme } from '$lib/stores/theme';
   import { onMount } from 'svelte';
   import { slide } from 'svelte/transition';
+  import Sun from '~icons/lucide/sun';
+  import Moon from '~icons/lucide/moon';
 
   // Svelte 5 State Runes
   let scrolled = $state(false);
@@ -66,9 +68,9 @@
         aria-label="Toggle theme"
       >
         {#if $theme === 'dark'}
-          <span class="text-lg">☀️</span>
+          <Sun class="w-5 h-5 text-slate-700 dark:text-slate-300" />
         {:else}
-          <span class="text-lg">🌙</span>
+          <Moon class="w-5 h-5 text-slate-700 dark:text-slate-300" />
         {/if}
       </button>
     </div>
@@ -80,7 +82,11 @@
         class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
         aria-label="Toggle theme"
       >
-        {$theme === 'dark' ? '☀️' : '🌙'}
+        {#if $theme === 'dark'}
+          <Sun class="w-5 h-5 text-slate-700 dark:text-slate-300" />
+        {:else}
+          <Moon class="w-5 h-5 text-slate-700 dark:text-slate-300" />
+        {/if}
       </button>
       
       <button

@@ -66,6 +66,7 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Framer Motion', 'Wouter', 'EmailJS'],
     category: 'web',
     live: 'https://www.brickstrade.com.ng',
+    github:  'https://github.com/masterultron/BricksTrade',
     image: '/projects/brickstrade.png',
     featured: true,
   },

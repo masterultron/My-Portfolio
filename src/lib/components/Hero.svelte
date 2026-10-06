@@ -10,10 +10,11 @@
   let mouseY = $state(0);
 
   const roles = [
-    'Frontend Engineer', 
-    'Aspiring Full Stack',
-    'Creative Developer',
-  ];
+  'Software Engineer',
+  'Frontend Engineer',
+  'Creative Developer',
+  'Data Science & AI Student',
+];
 
   let roleIndex = 0;
   let charIndex = 0;
@@ -194,9 +195,7 @@
             in:fly={{ y: 20, duration: 700, delay: 800 }}
             class="text-lg text-slate-400 max-w-lg leading-relaxed mb-10 mx-auto lg:mx-0"
           >
-            I craft immersive web experiences where design meets engineering.
-            Specializing in React, Next, Svelte, and modern tooling to build
-            products people love and admire, tailored to the clients needs.
+            I craft immersive web experiences where design meets engineering. I build with React, Next.js, TypeScript, and Tailwind CSS to turn client ideas into fast, polished products that people enjoy using.
           </p>
 
           <!-- CTAs -->

@@ -22,61 +22,100 @@
   const SYSTEM_CONTEXT = `You are an AI assistant embedded in Abdurrahaman Jamiu's developer portfolio website. Your only job is to answer questions about Abdurrahaman. Always answer confidently using the information below. Never say you don't have information — use what is provided.
 
 NAME: Abdurrahaman Jamiu
-TITLE: Frontend Engineer
-LOCATION: Abuja, Nigeria
+TITLE: Software Engineer
+LOCATION: Dubai, United Arab Emirates
 STATUS: Available for freelance and full-time roles
-EMAIL: abduurrahamanjamiu75@outlook.com
+EMAIL: abdurrahamanjamiu75@outlook.com
 GITHUB: github.com/masterultron
-INSTAGRAM: @theeabdurrahaman.dev
+INSTAGRAM: @theeabdurrahaman
 LINKEDIN: linkedin.com/in/abdurrahaman-jamiu-14131524b
 
 EDUCATION:
 - B.Eng. Computer Engineering, Federal University of Technology Minna, November 2018 - February 2025
-- Msc. Data Science and AI, Middlesex University Dubai, September 2026 - Present
+- MSc. Data Science and AI, Middlesex University Dubai, September 2026 - Present
 - Diploma in Java - NIIT
 - Software Engineering - ALX Africa
 - HNG Frontend Wizard (Stage 5 — highest stage)
 - Web Security Fundamentals
 
 EXPERIENCE:
-- 2024 to Present: Frontend Developer (Freelance and Contract) — Building enterprise-grade web solutions for clients
-- 2023 to 2024: Frontend Engineer — Specialized in Svelte and React ecosystems
+- 2026 to Present: MSc student (Data Science and AI) — Pairing strong frontend engineering with ML to build intelligent, user-facing products.
+- 2024 to Present: Frontend Developer (Freelance and Contract) — Delivering production web solutions for clients, including FaL360 ERP, Ajoke Gold International, and BricksTrade.
+- 2022 to 2024: Frontend Engineer — Built and maintained React-based applications.
 
 SKILLS:
-- Frontend: React, Svelte, SvelteKit, Next.js, TypeScript, JavaScript, HTML, CSS
-- Styling: Tailwind CSS, GSAP, Framer Motion
-- Backend: Node.js, Laravel, Express.js, PHP
-- Database: PostgreSQL, SQLite, MySQL, MongoDB
-- Security: Web Crypto API, JWT, End-to-End Encryption
-- Testing: Vitest, Playwright
-- Tools: Git, Docker, Vite, Chrome Extensions, Netlify, Vercel
+Core (use confidently):
+- React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Git
+
+Used in specific projects:
+- Laravel (FaL360 ERP), Web Crypto API (WhisperBox), Vitest and Playwright (Habit Tracker), Framer Motion (BricksTrade), Svelte (this portfolio)
+
+Learning (MSc / early stage):
+- Python, NumPy, pandas, Matplotlib, scikit-learn
+
+Used once (this portfolio):
+- Svelte/SvelteKit
 
 PROJECTS:
-1. WhisperBox — End-to-end encrypted messaging app. Built with Next.js, RSA-OAEP key exchange, AES-GCM encryption, WebSockets, IndexedDB. The server never sees plaintext messages. Live at hng-whisperbox.netlify.app
-2. AI Page Summarizer — Chrome Extension using Manifest V3 that summarizes any webpage using Cohere AI. Has per-URL caching, dark mode, and secure API key storage.
-3. Ajoke Gold International — Luxury jewelry e-commerce with Paystack and PayPal payment, Resend email notifications, and WhatsApp inquiry system. Live at ajoke-gold-international.netlify.app
-4. Premium Car Rental — Modern car rental platform with sleek UI, car filtering, and booking flow. Built with HTML, CSS, JavaScript.
-5. Ramadan Companion — Personalized dua journal app with prayer times, fasting progress tracking, and daily curated Islamic content. Built with Next.js and Tailwind.
-6. e-Walk-In Library — Full-stack MERN digital library system with user auth, digital book borrowing, and real-time admin dashboard.
-7. Habit Tracker PWA — Progressive Web App with streak tracking, offline support, local auth. Tested with Vitest and Playwright. Live at hng-stage3-habit-tracker.netlify.app
-8. Invoice Management App — Full-featured invoice manager with CRUD, status filtering (draft/pending/paid), dark mode. Live at hng4-stage2-invoice-app.netlify.app
-9. FaL360 ERP — Enterprise Resource Management system for FaLGates Limited. Laravel, Inertia.js, React. Includes weighbridge operations, stock management, bin locations.
+1. BricksTrade Property Developer — Cinematic brochure website for a real-estate developer, with a full-screen crossfade project slideshow, smart-scroll navigation, Framer Motion scroll-reveal animations, and a serverless EmailJS contact form. No backend.
+2. WhisperBox — End-to-end encrypted messaging app. Built with Next.js, RSA-OAEP key exchange, AES-GCM encryption, WebSockets, IndexedDB. The server never sees plaintext messages. Live at hng-whisperbox.netlify.app
+3. AI Page Summarizer — Chrome Extension using Manifest V3 that summarizes any webpage using Cohere AI. Has per-URL caching, dark mode, and secure API key storage.
+4. Ajoke Gold International — Serverless e-commerce platform for a UAE-based jewelry brand, built with React, TypeScript, Vite, and Netlify Functions, with no traditional backend server or database. Features a secure PayPal flow with server-side IPN verification, amount cross-checking, and duplicate-transaction detection (Netlify Blobs), retry-safe order notifications via Resend, and multi-currency pricing (AED/USD/NGN). Currently integrating Flutterwave for local payment options. Live at ajoke-gold-international.netlify.app
+5. Premium Car Rental — Modern car rental platform with sleek UI, car filtering, and booking flow. Built with HTML, CSS, JavaScript.
+6. Ramadan Companion — Personalized dua journal app with prayer times, fasting progress tracking, and daily curated Islamic content. Built with Next.js and Tailwind.
+7. e-Walk-In Library — Full-stack MERN digital library system with user auth, digital book borrowing, and real-time admin dashboard.
+8. Habit Tracker PWA — Progressive Web App with streak tracking, offline support, local auth. Tested with Vitest and Playwright. Live at hng-stage3-habit-tracker.netlify.app
+9. Invoice Management App — Full-featured invoice manager with CRUD, status filtering (draft/pending/paid), dark mode. Live at hng4-stage2-invoice-app.netlify.app
+10. FaL360 ERP — Enterprise Resource Management system for FaLGates Limited. Laravel, Inertia.js, React. Includes weighbridge operations, stock management, bin locations.
 
 RULES:
 - Keep answers to 2-4 sentences
 - Be friendly, confident, and professional
 - Never apologize for lacking information — use what is above
 - If truly unrelated to Abdurrahaman, say "I can only answer questions about Abdurrahaman's portfolio"
-- Always encourage visitors to reach out at abduurrahamanjamiu75@outlook.com`;
+- Always encourage visitors to reach out at abdurrahamanjamiu75@outlook.com`;
 
-  const hardcodedQA: Record<string, string> = {
-    "what are his best projects": "FaL360 ERP, Ajoke Gold International, WhisperBox, and the Ramadan Companion stand out as his most impactful work — spanning enterprise systems, e-commerce, encrypted messaging, and spiritual tech. Each one solves a real problem with production-grade engineering.",
-    "tell me about whisperbox": "WhisperBox is a secure messaging app where the server never sees plaintext. It uses RSA-OAEP for key exchange, AES-GCM for message encryption, and IndexedDB to store private keys — meaning only the intended recipient can ever decrypt a message. Built with Next.js, TypeScript, and the Web Crypto API.",
-    "is he available for hire": "Yes! Abdurrahaman is currently available for freelance and full-time roles. He's open to frontend, full-stack, and consulting work. Reach out at abduurrahamanjamiu75@outlook.com to discuss your project. 🚀",
-    "what is the ramadan companion": "Ramadan Companion is a personalized dua journal and spiritual companion app built with Next.js and Tailwind CSS. It features dynamic prayer times, fasting progress tracking, and curated daily Islamic content — designed to help users stay connected and informed about their duas and their meanings throughout Ramadan.",
-    "explain the tech stack behind this real-time engine": "For deep technical questions like this, Abdurrahaman would love to walk you through it personally. Reach out at abduurrahamanjamiu75@outlook.com or connect on LinkedIn at linkedin.com/in/abdurrahaman-jamiu-14131524b 💬",
-    "can this platform scale for enterprise monitoring": "That's a great architectural question that deserves a detailed conversation. Abdurrahaman has worked on enterprise-grade systems like FaL360 ERP for FaLGates Limited. Get in touch at abduurrahamanjamiu75@outlook.com to discuss your specific requirements. 🏢",
-  };
+ const hardcodedQA: Record<string, string> = {
+  "what are his best projects":
+    `Here are Abdurrahaman's standout projects:
+
+- FaL360 ERP: A full ERP system with multiple modules for FaLGates Limited, built with Laravel, Inertia.js, and React. Features weighbridge operations, stock receipts, and bin management.
+
+- Ajoke Gold International: A serverless e-commerce platform for a UAE-based jewelry brand, with a secure PayPal flow (server-side IPN verification and duplicate-transaction detection), retry-safe order emails via Resend, and multi-currency pricing.
+
+- BricksTrade Property Developer: An editorial, cinematic brochure website for a real-estate developer, with a full-screen crossfade project slideshow, smart-scroll navigation, Framer Motion scroll-reveal animations (with reduced-motion support), and a serverless EmailJS contact form.
+
+- WhisperBox: A secure messaging app where the server never sees plaintext, using RSA-OAEP, AES-GCM, and IndexedDB for private key storage.
+
+- Ramadan Companion: A personalized dua journal and spiritual companion app with prayer times and fasting progress tracking.
+
+Together they span enterprise systems, e-commerce, a real estate company's online brand presence, encrypted messaging, and spiritual tech, each solving a real problem with production-grade engineering.`,
+
+  "tell me about fal360 erp":
+    "FaL360 ERP is a full ERP system with multiple modules built for FaLGates Limited using Laravel, Inertia.js, and React. It covers weighbridge operations, stock receipts, bin management, and more.",
+
+  
+    "tell me about ajoke gold international":
+    "Ajoke Gold International is a serverless e-commerce platform for a UAE-based jewelry brand, built with React, TypeScript, Vite, and Netlify Functions. It has a secure PayPal flow with server-side IPN verification, amount cross-checking, and duplicate-transaction detection, plus retry-safe order emails via Resend and AED/USD/NGN pricing. Abdurrahaman is currently adding Flutterwave for local payment options.",
+
+  "tell me about bricks trade property developer":
+    "BricksTrade is an editorial, cinematic brochure website for a real-estate developer. It features a full-screen crossfade project slideshow, smart-scroll navigation, scroll-reveal animations via Framer Motion (with reduced-motion support), and a serverless EmailJS-powered contact form, with no backend required.",
+
+  "tell me about whisperbox":
+    "WhisperBox is a secure messaging app where the server never sees plaintext. It uses RSA-OAEP for key exchange, AES-GCM for message encryption, and IndexedDB to store private keys, meaning only the intended recipient can ever decrypt a message. Built with Next.js, TypeScript, and the Web Crypto API.",
+
+  "is he available for hire":
+    "Yes! Abdurrahaman is currently available for freelance and full-time roles. He's open to frontend, full-stack, and consulting work. Reach out at abdurrahamanjamiu75@outlook.com to discuss your project.",
+
+  "what is the ramadan companion":
+    "Ramadan Companion is a personalized dua journal and spiritual companion app built with Next.js and Tailwind CSS. It features dynamic prayer times, fasting progress tracking, and curated daily Islamic content, designed to help users stay connected and informed about their duas and their meanings throughout Ramadan.",
+
+    "what is his experience":
+    "Abdurrahaman has worked as a frontend engineer since 2022, then went freelance in 2024, delivering projects like FaL360 ERP and Ajoke Gold International. He's now pursuing an MSc in Data Science and AI at Middlesex University Dubai, pairing frontend skills with ML. Reach out at abdurrahamanjamiu75@outlook.com to discuss working together.",
+
+  "what is the ai page summarizer":
+    "AI Page Summarizer is a Manifest V3 Chrome extension that summarizes any webpage using Cohere AI. It has per-URL caching, dark mode, and secure API key storage.",
+};
 
   function getHardcodedAnswer(question: string): string | null {
     const normalized = question.toLowerCase().trim().replace(/[?!.,]/g, '');
@@ -151,7 +190,7 @@ RULES:
         {
           role: 'assistant',
           content:
-            "I'm having a connection issue. You can reach Abdurrahaman directly at abduurrahamanjamiu75@outlook.com",
+            "I'm having a connection issue. You can reach Abdurrahaman directly at abdurrahamanjamiu75@outlook.com",
         },
       ];
     } finally {
@@ -173,7 +212,7 @@ RULES:
     "What are his best projects?",
     "Tell me about WhisperBox",
     "Is he available for hire?",
-    "What is the Ramadan Companion?",
+    "What is the Ajoke Gold?",
   ];
 </script>
 
