@@ -1,6 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { fly, fade } from 'svelte/transition';
+  import React from '~icons/simple-icons/react';
+  import Nextjs from '~icons/simple-icons/nextdotjs';
+  import ShieldCheck from '~icons/lucide/shield-check';
 
   // Svelte 5 State Runes
   let visible = $state(false);
@@ -262,27 +265,27 @@
         >
           <div class="relative w-80 h-80">
             <div class="absolute top-0 right-0 glass rounded-2xl p-5 w-44 animate-float-slow border border-white/10">
-              <div class="text-2xl mb-2">⚛️</div>
+              <React class="w-7 h-7 mb-2 text-indigo-400" />
               <div class="text-sm font-bold text-white">React</div>
-              <div class="text-xs text-slate-400">Expert Level</div>
+              <div class="text-xs text-slate-400">Core skill</div>
               <div class="mt-2 h-1 bg-slate-700 rounded-full">
                 <div class="h-1 bg-indigo-500 rounded-full w-[95%]"></div>
               </div>
             </div>
             <div class="absolute bottom-8 left-0 glass rounded-2xl p-5 w-44 animate-float-medium border border-white/10">
-              <div class="text-2xl mb-2">🔥</div>
-              <div class="text-sm font-bold text-white">Svelte</div>
-              <div class="text-xs text-slate-400">Advanced</div>
+              <Nextjs class="w-7 h-7 mb-2 text-purple-400" />
+              <div class="text-sm font-bold text-white">Next.js</div>
+              <div class="text-xs text-slate-400">Core skill</div>
               <div class="mt-2 h-1 bg-slate-700 rounded-full">
-                <div class="h-1 bg-purple-500 rounded-full w-[80%]"></div>
+                <div class="h-1 bg-purple-500 rounded-full w-[88%]"></div>
               </div>
             </div>
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 glass rounded-2xl p-5 w-40 animate-float-fast border border-white/10">
-              <div class="text-2xl mb-2">🔐</div>
+              <ShieldCheck class="w-7 h-7 mb-2 text-emerald-400" />
               <div class="text-sm font-bold text-white">Security</div>
-              <div class="text-xs text-slate-400">E2EE Expert</div>
+              <div class="text-xs text-slate-400">WhisperBox (E2EE)</div>
               <div class="mt-2 h-1 bg-slate-700 rounded-full">
-                <div class="h-1 bg-emerald-500 rounded-full w-[85%]"></div>
+                <div class="h-1 bg-emerald-500 rounded-full w-[45%]"></div>
               </div>
             </div>
           </div>
