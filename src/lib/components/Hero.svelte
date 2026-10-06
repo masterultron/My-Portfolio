@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { fly, fade } from 'svelte/transition';
-  import React from '~icons/simple-icons/react';
-  import Nextjs from '~icons/simple-icons/nextdotjs';
-  import ShieldCheck from '~icons/lucide/shield-check';
+  import Briefcase from '~icons/lucide/briefcase';
+  import GraduationCap from '~icons/lucide/graduation-cap';
+  import ShoppingBag from '~icons/lucide/shopping-bag';
 
   // Svelte 5 State Runes
   let visible = $state(false);
@@ -263,29 +263,31 @@
           in:fly={{ x: 50, duration: 900, delay: 600 }}
           class="hidden lg:flex items-center justify-center relative"
         >
-          <div class="relative w-80 h-80">
-            <div class="absolute top-0 right-0 glass rounded-2xl p-5 w-44 animate-float-slow border border-white/10">
-              <React class="w-7 h-7 mb-2 text-indigo-400" />
-              <div class="text-sm font-bold text-white">React</div>
-              <div class="text-xs text-slate-400">Core skill</div>
-              <div class="mt-2 h-1 bg-slate-700 rounded-full">
-                <div class="h-1 bg-indigo-500 rounded-full w-[95%]"></div>
+          <div class="relative w-96 h-96">
+            <div class="absolute top-0 right-0 glass rounded-2xl p-5 w-56 animate-float-slow border border-white/10">
+              <Briefcase class="w-6 h-6 mb-3 text-indigo-400" />
+              <div class="text-xs text-slate-400">Featured project</div>
+              <div class="text-base font-bold text-white mt-0.5">FaL360 ERP</div>
+              <div class="text-xs text-slate-400 mt-1 leading-snug">
+                Enterprise system for FaLGates Limited, built with Laravel, Inertia.js, and React.
               </div>
             </div>
-            <div class="absolute bottom-8 left-0 glass rounded-2xl p-5 w-44 animate-float-medium border border-white/10">
-              <Nextjs class="w-7 h-7 mb-2 text-purple-400" />
-              <div class="text-sm font-bold text-white">Next.js</div>
-              <div class="text-xs text-slate-400">Core skill</div>
-              <div class="mt-2 h-1 bg-slate-700 rounded-full">
-                <div class="h-1 bg-purple-500 rounded-full w-[88%]"></div>
+
+            <div class="absolute bottom-4 left-0 glass rounded-2xl p-5 w-56 animate-float-medium border border-white/10">
+              <GraduationCap class="w-6 h-6 mb-3 text-purple-400" />
+              <div class="text-xs text-slate-400">Currently studying</div>
+              <div class="text-base font-bold text-white mt-0.5">MSc Data Science &amp; AI</div>
+              <div class="text-xs text-slate-400 mt-1 leading-snug">
+                Middlesex University Dubai, adding ML to a frontend foundation.
               </div>
             </div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 glass rounded-2xl p-5 w-40 animate-float-fast border border-white/10">
-              <ShieldCheck class="w-7 h-7 mb-2 text-emerald-400" />
-              <div class="text-sm font-bold text-white">Security</div>
-              <div class="text-xs text-slate-400">WhisperBox (E2EE)</div>
-              <div class="mt-2 h-1 bg-slate-700 rounded-full">
-                <div class="h-1 bg-emerald-500 rounded-full w-[45%]"></div>
+
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 glass rounded-2xl p-5 w-52 animate-float-fast border border-white/10">
+              <ShoppingBag class="w-6 h-6 mb-3 text-emerald-400" />
+              <div class="text-xs text-slate-400">Client work</div>
+              <div class="text-base font-bold text-white mt-0.5">Ajoke Gold</div>
+              <div class="text-xs text-slate-400 mt-1 leading-snug">
+                Serverless jewelry store with server-verified PayPal payments.
               </div>
             </div>
           </div>
