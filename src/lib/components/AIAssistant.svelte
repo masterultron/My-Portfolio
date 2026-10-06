@@ -31,7 +31,8 @@ INSTAGRAM: @theeabdurrahaman.dev
 LINKEDIN: linkedin.com/in/abdurrahaman-jamiu-14131524b
 
 EDUCATION:
-- B.Eng. Computer Engineering, Federal University of Technology Minna, 2025
+- B.Eng. Computer Engineering, Federal University of Technology Minna, November 2018 - February 2025
+- Msc. Data Science and AI, Middlesex University Dubai, September 2026 - Present
 - Diploma in Java - NIIT
 - Software Engineering - ALX Africa
 - HNG Frontend Wizard (Stage 5 — highest stage)
