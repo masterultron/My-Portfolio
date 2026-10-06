@@ -263,8 +263,8 @@
           in:fly={{ x: 50, duration: 900, delay: 600 }}
           class="hidden lg:flex items-center justify-center relative"
         >
-          <div class="relative w-96 h-96">
-            <div class="absolute top-0 right-0 glass rounded-2xl p-5 w-56 animate-float-slow border border-white/10">
+          <div class="flex flex-col gap-6 w-96">
+            <div class="self-end glass rounded-2xl p-5 w-56 animate-float-slow border border-white/10">
               <Briefcase class="w-6 h-6 mb-3 text-indigo-400" />
               <div class="text-xs text-slate-400">Featured project</div>
               <div class="text-base font-bold text-white mt-0.5">FaL360 ERP</div>
@@ -273,7 +273,7 @@
               </div>
             </div>
 
-            <div class="absolute bottom-4 left-0 glass rounded-2xl p-5 w-56 animate-float-medium border border-white/10">
+            <div class="self-start glass rounded-2xl p-5 w-56 animate-float-medium border border-white/10">
               <GraduationCap class="w-6 h-6 mb-3 text-purple-400" />
               <div class="text-xs text-slate-400">Currently studying</div>
               <div class="text-base font-bold text-white mt-0.5">MSc Data Science &amp; AI</div>
@@ -282,7 +282,7 @@
               </div>
             </div>
 
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 glass rounded-2xl p-5 w-52 animate-float-fast border border-white/10">
+            <div class="self-end mr-8 glass rounded-2xl p-5 w-56 animate-float-fast border border-white/10">
               <ShoppingBag class="w-6 h-6 mb-3 text-emerald-400" />
               <div class="text-xs text-slate-400">Client work</div>
               <div class="text-base font-bold text-white mt-0.5">Ajoke Gold</div>

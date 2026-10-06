@@ -20,10 +20,15 @@ export const skills: Skill[] = [
   // Security
   { name: 'Web Crypto API', level: 45, category: 'security' },
 
-  // Tools
+    // Tools
   { name: 'Git', level: 90, category: 'tools' },
+  { name: 'Netlify', level: 70, category: 'tools' },      
+  { name: 'Vite', level: 65, category: 'tools' },         
+  { name: 'Vercel', level: 60, category: 'tools' },
+  { name: 'Chrome Extensions', level: 50, category: 'tools' }, 
   { name: 'Docker', level: 45, category: 'tools' },
-  { name: 'Playwright', level: 45, category: 'tools' },
+  { name: 'Vitest', level: 40, category: 'tools' },      
+  { name: 'Playwright', level: 40, category: 'tools' },   
 
   // Machine Learning (MSc, still learning)
   { name: 'Python', level: 55, category: 'ml' },
