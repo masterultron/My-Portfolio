@@ -123,7 +123,7 @@ export const projects: Project[] = [
     longDescription: 'A responsive invoice management application with create/edit/delete functionality, status filtering, draft system, and persistent localStorage.',
     tech: ['React', 'TypeScript', 'Tailwind', 'localStorage'],
     category: 'web',
-    live: 'invoice-managment-app.netlify.app',
+    live: 'https://invoice-managment-app.netlify.app',
     github: 'https://https://github.com/masterultron/Invoice-app',
     image: '/projects/invoice-app.png',
     featured: false,
