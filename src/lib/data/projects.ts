@@ -63,6 +63,18 @@ export const projects: Project[] = [
     featured: false,
   },
   {
+    id: 'Videography-Site',
+    title: 'Videography Site',
+    description: 'Professional videography portfolio website',
+    longDescription: 'A modern, responsive website for a professional videographer to showcase their work, services, and contact information.',
+    tech: ['Next.js', 'React', 'Tailwind', 'TypeScript'],
+    category: 'web',
+    live: 'https://shot-by-anike.vercel.app/',
+    github: 'https://github.com/masterultron/VideographySite',
+    image: '/projects/videography-site.png',
+    featured: false,
+  },
+  {
     id: 'ai-summarizer',
     title: 'AI Page Summarizer',
     description: 'Chrome extension that summarizes any webpage using AI',
@@ -84,8 +96,6 @@ export const projects: Project[] = [
     image: '/projects/ejidezee.png',
     featured: true,
   },
-
-  
   {
     id: 'car-rental',
     title: 'Premium Car Rental',
@@ -145,16 +155,5 @@ export const projects: Project[] = [
     image: '/projects/invoice-app.png',
     featured: false,
   },
-  {
-    id: 'Videography-Site',
-    title: 'Videography Site',
-    description: 'Professional videography portfolio website',
-    longDescription: 'A modern, responsive website for a professional videographer to showcase their work, services, and contact information.',
-    tech: ['Next.js', 'React', 'Tailwind', 'TypeScript'],
-    category: 'web',
-    live: 'https://shot-by-anike.vercel.app/',
-    github: 'https://github.com/masterultron/VideographySite',
-    image: '/projects/videography-site.png',
-    featured: false,
-  },
+
 ];
