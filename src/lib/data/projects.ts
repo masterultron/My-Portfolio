@@ -12,6 +12,32 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+
+  {
+    id: 'brickstrade',
+    title: 'BricksTrade Property Developer',
+    description: 'Cinematic real-estate brochure site with crossfade slideshow',
+    longDescription: 'An editorial, cinematic brochure website for a real-estate developer, featuring a full-screen crossfade project slideshow, smart-scroll navigation, scroll-reveal animations via Framer Motion (with reduced-motion support), and a serverless EmailJS-powered contact form — no backend required.',
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Framer Motion', 'Wouter', 'EmailJS'],
+    category: 'web',
+    live: 'https://www.brickstrade.com.ng',
+    github:  'https://github.com/masterultron/BricksTrade',
+    image: '/projects/brickstrade.png',
+    featured: true,
+  },
+
+  {
+    id: 'ajoke-gold',
+    title: 'Ajoke Gold International',
+    description: 'Serverless luxury jewelry e-commerce with verified PayPal payments',
+    longDescription: 'A full-stack, serverless e-commerce platform for a UAE-based jewelry brand. Features server-side PayPal IPN verification with real-time amount cross-checking and duplicate-transaction detection, and retry-safe order notifications via Resend — all with zero traditional backend or database.',
+    tech: ['React', 'TypeScript', 'Vite', 'Netlify Functions', 'Netlify Blobs', 'PayPal API', 'Resend', 'Tailwind'],
+    category: 'fullstack',
+    live: 'https://www.ajokegoldinternational.com',
+    github: 'https://github.com/masterultron/AjokeGold',
+    image: '/projects/ajoke-gold.png',
+    featured: true,
+  },
   {
     id: 'whisperbox',
     title: 'WhisperBox',
@@ -23,6 +49,18 @@ export const projects: Project[] = [
     github: 'https://github.com/masterultron/WhisperBox',
     image: '/projects/whisperbox.png',
     featured: true,
+  },
+  {
+    id: 'fal360',
+    title: 'FaL360 ERP',
+    description: 'Enterprise Resource Management Laravel + Inertia',
+    longDescription: 'A full ERP system with multiple modules for FaLGates Limited built with Laravel, Inertia.js, and React. Features weighbridge operations, stock receipts, bin management.',
+    tech: ['Laravel', 'React', 'Inertia.js', 'TypeScript', 'Tailwind'],
+    category: 'fullstack',
+    live: '360.falgates.com',
+    github: 'https://github.com/falgatesops-maker/Fal360-Backend',
+    image: '/projects/fal360.png',
+    featured: false,
   },
   {
     id: 'ai-summarizer',
@@ -46,30 +84,8 @@ export const projects: Project[] = [
     image: '/projects/ejidezee.png',
     featured: true,
   },
-  {
-    id: 'ajoke-gold',
-    title: 'Ajoke Gold International',
-    description: 'Serverless luxury jewelry e-commerce with verified PayPal payments',
-    longDescription: 'A full-stack, serverless e-commerce platform for a UAE-based jewelry brand. Features server-side PayPal IPN verification with real-time amount cross-checking and duplicate-transaction detection, and retry-safe order notifications via Resend — all with zero traditional backend or database.',
-    tech: ['React', 'TypeScript', 'Vite', 'Netlify Functions', 'Netlify Blobs', 'PayPal API', 'Resend', 'Tailwind'],
-    category: 'fullstack',
-    live: 'https://www.ajokegoldinternational.com',
-    github: 'https://github.com/masterultron/AjokeGold',
-    image: '/projects/ajoke-gold.png',
-    featured: true,
-  },
-  {
-    id: 'brickstrade',
-    title: 'BricksTrade Property Developer',
-    description: 'Cinematic real-estate brochure site with crossfade slideshow',
-    longDescription: 'An editorial, cinematic brochure website for a real-estate developer, featuring a full-screen crossfade project slideshow, smart-scroll navigation, scroll-reveal animations via Framer Motion (with reduced-motion support), and a serverless EmailJS-powered contact form — no backend required.',
-    tech: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Framer Motion', 'Wouter', 'EmailJS'],
-    category: 'web',
-    live: 'https://www.brickstrade.com.ng',
-    github:  'https://github.com/masterultron/BricksTrade',
-    image: '/projects/brickstrade.png',
-    featured: true,
-  },
+
+  
   {
     id: 'car-rental',
     title: 'Premium Car Rental',
@@ -127,18 +143,6 @@ export const projects: Project[] = [
     live: 'https://invoice-managment-app.netlify.app',
     github: 'https://https://github.com/masterultron/Invoice-app',
     image: '/projects/invoice-app.png',
-    featured: false,
-  },
-  {
-    id: 'fal360',
-    title: 'FaL360 ERP',
-    description: 'Enterprise Resource Management Laravel + Inertia',
-    longDescription: 'A full ERP system with multiple modules for FaLGates Limited built with Laravel, Inertia.js, and React. Features weighbridge operations, stock receipts, bin management.',
-    tech: ['Laravel', 'React', 'Inertia.js', 'TypeScript', 'Tailwind'],
-    category: 'fullstack',
-    live: '360.falgates.com',
-    github: 'https://github.com/falgatesops-maker/Fal360-Backend',
-    image: '/projects/fal360.png',
     featured: false,
   },
   {
