@@ -152,7 +152,7 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Tailwind', 'localStorage'],
     category: 'web',
     live: 'https://invoice-managment-app.netlify.app',
-    github: 'https://https://github.com/masterultron/Invoice-app',
+    github: 'https://github.com/masterultron/Invoice-app',
     image: '/projects/invoice-app.png',
     featured: false,
   },

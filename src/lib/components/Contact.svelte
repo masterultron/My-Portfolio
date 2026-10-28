@@ -86,7 +86,7 @@
               id="email"
               type="email"
               bind:value={email}
-              placeholder="jamiu@example.com"
+              placeholder="you@company.com"
               class="w-full px-6 py-5 bg-white dark:bg-slate-950 border-2 rounded-2xl text-lg text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all {errors.email ? 'border-red-400' : 'border-slate-200 dark:border-slate-800'}"
             />
             {#if errors.email}
@@ -132,7 +132,7 @@
       <!-- Social Links -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full max-w-4xl">
         {#each [
-          { label: 'Email', value: 'MAIL', href: 'mailto:abdurrahamanjamiu75@outlook.com', icon: Mail },
+          { label: 'Email', value: 'abdurrahamanjamiu75@outlook.com', href: 'mailto:abdurrahamanjamiu75@outlook.com', icon: Mail },
           { label: 'LinkedIn', value: 'LinkedIn', href: 'https://www.linkedin.com/in/abdurrahaman-jamiu-14131524b/', icon: LinkedIn },
           { label: 'Instagram', value: 'Instagram', href: 'https://www.instagram.com/theeabdurrahaman.dev?igsh=M3l2eHIyMWtra2hn&utm_source=qr', icon: Instagram },
           { label: 'GitHub', value: 'GitHub', href: 'https://github.com/masterultron', icon: GitHub },
@@ -146,7 +146,7 @@
             <item.icon class="w-8 h-8 mb-1 text-slate-600 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
             <div>
               <p class="text-[10px] text-slate-400 uppercase tracking-widest font-black mb-1">{item.label}</p>
-              <p class="text-base text-slate-700 dark:text-slate-300 font-bold group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+              <p class="text-base break-all text-slate-700 dark:text-slate-300 font-bold group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                 {item.value}
               </p>
             </div>
