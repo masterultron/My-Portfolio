@@ -17,68 +17,7 @@
   let loading = $state(false);
   let chatEl = $state<HTMLDivElement>();
 
-  const COHERE_API_KEY = import.meta.env.VITE_COHERE_API_KEY;
 
-  const SYSTEM_CONTEXT = `You are an AI assistant embedded in Abdurrahaman Jamiu's developer portfolio website. Your only job is to answer questions about Abdurrahaman. Always answer confidently using the information below. Never say you don't have information — use what is provided.
-
-NAME: Abdurrahaman Jamiu
-TITLE: Software Engineer
-LOCATION: Dubai, United Arab Emirates
-STATUS: Available for freelance and full-time roles
-EMAIL: abdurrahamanjamiu75@outlook.com
-GITHUB: github.com/masterultron
-INSTAGRAM: @theeabdurrahaman
-LINKEDIN: linkedin.com/in/abdurrahaman-jamiu-14131524b
-
-EDUCATION:
-- B.Eng. Computer Engineering, Federal University of Technology Minna, November 2018 - February 2025
-- MSc. Data Science and AI, Middlesex University Dubai, September 2026 - Present
-- Diploma in Java - NIIT
-- Software Engineering - ALX Africa
-- HNG Frontend Wizard (Stage 5 — highest stage)
-- Web Security Fundamentals
-
-EXPERIENCE:
-- 2026 to Present: MSc student (Data Science and AI) — Pairing strong frontend engineering with ML to build intelligent, user-facing products.
-- May 2026 to Present: Freelance Frontend Developer (UAE and Nigerian clients) — Delivering production web solutions, including Ajoke Gold International, Ejidezee Gold International, and BricksTrade.
-- August 2025 to June 2026: Frontend Developer (Frontend Lead), FaLGates Limited, Kaduna, Nigeria — Contract role that ended June 2026. Led frontend development of the FaL360 ERP modules and rebuilt the corporate website in React.
-- February 2025 to August 2025: Web Developer and SEO Optimisation, Luxiar Construction Ltd, Abuja.
-- February 2025 to April 2025: IT Personnel, Hausba, Abuja.
-- January 2024 to August 2024: Lead Front-end Developer, FundusAI, Abuja.
-- October 2023 to February 2024: Engineering Intern, Galaxy Backbone, Abuja.
-
-SKILLS:
-Core (use confidently):
-- React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Git
-
-Used in specific projects:
-- Laravel (FaL360 ERP), Framer Motion (BricksTrade), Svelte (this portfolio)
-
-Learning (MSc / early stage):
-- Python, NumPy, pandas, Matplotlib, scikit-learn
-
-Used once (this portfolio):
-- Svelte/SvelteKit
-
-PROJECTS:
-1. BricksTrade Property Developer — Cinematic brochure website for a real-estate developer, with a full-screen crossfade project slideshow, smart-scroll navigation, Framer Motion scroll-reveal animations, and a serverless EmailJS contact form. No backend.
-2. WhisperBox — End-to-end encrypted messaging app. Built with Next.js, RSA-OAEP key exchange, AES-GCM encryption, WebSockets, IndexedDB. The server never sees plaintext messages. Live at covert-whisperbox.netlify.app
-3. AI Page Summarizer — Chrome Extension using Manifest V3 that summarizes any webpage using Google Gemini. Has per-URL caching, dark mode, and secure API key storage.
-4. Ajoke Gold International — Serverless e-commerce platform for a UAE-based jewelry brand, built with React, TypeScript, Vite, and Netlify Functions, with no traditional backend server or database. Features a secure PayPal flow with server-side IPN verification, amount cross-checking, and duplicate-transaction detection (Netlify Blobs), retry-safe order notifications via Resend, and multi-currency pricing (AED/USD/NGN). Currently integrating Flutterwave for local payment options. Live at ajokegoldinternational.com
-5. Premium Car Rental — Modern car rental platform with sleek UI, car filtering, and booking flow. Built with HTML, CSS, JavaScript.
-6. Ramadan Companion — Personalized dua journal app with prayer times, fasting progress tracking, and daily curated Islamic content. Built with Next.js and Tailwind.
-7. e-Walk-In Library — Full-stack MERN digital library system with user auth, digital book borrowing, and real-time admin dashboard.
-8. Videography Site — Professional videography portfolio website built with Next.js, React, Tailwind and TypeScript. Live at shot-by-anike.vercel.app
-9. Ejidezee Gold International — Serverless jewelry e-commerce for a UAE-based brand with server-side PayPal IPN verification, Resend order notifications, and a Decap CMS that lets the owner manage a 200+ item catalog. Live at ejidezeegoldinternational.com.ng
-10. Invoice Management App — Full-featured invoice manager with CRUD, status filtering (draft/pending/paid), dark mode. Live at invoice-managment-app.netlify.app
-11. FaL360 ERP — Enterprise Resource Management system for FaLGates Limited. Laravel, Inertia.js, React. Includes weighbridge operations, stock management, bin locations.
-
-RULES:
-- Keep answers to 2-4 sentences
-- Be friendly, confident, and professional
-- Never apologize for lacking information — use what is above
-- If truly unrelated to Abdurrahaman, say "I can only answer questions about Abdurrahaman's portfolio"
-- Always encourage visitors to reach out at abdurrahamanjamiu75@outlook.com`;
 
  const hardcodedQA: Record<string, string> = {
   "what are his best projects":
@@ -163,31 +102,18 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
         content: m.content,
       }));
 
-      const response = await fetch('https://api.cohere.com/v2/chat', {
+      // The API key and system prompt live on the server (src/routes/api/chat).
+      const response = await fetch('/api/chat', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${COHERE_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: 'command-r',
-          messages: [
-            { role: 'system', content: SYSTEM_CONTEXT },
-            ...conversationHistory,
-            { role: 'user', content: userMessage },
-          ],
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: conversationHistory }),
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        throw new Error(data.message || 'API error');
+        throw new Error(`Chat request failed (${response.status})`);
       }
 
-      const reply =
-        data.message?.content?.[0]?.text ??
-        "I couldn't generate a response. Please try again.";
+      const { reply } = (await response.json()) as { reply: string };
 
       messages = [...messages, { role: 'assistant', content: reply }];
     } catch (err) {
@@ -334,6 +260,7 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
             bind:value={input}
             onkeydown={handleKeydown}
             placeholder="Ask me anything..."
+            maxlength="1000"
             disabled={loading}
             class="flex-1 bg-transparent text-sm text-gray-900 dark:text-white placeholder:text-gray-400 outline-none disabled:opacity-50 min-w-0"
             aria-label="Chat input"
