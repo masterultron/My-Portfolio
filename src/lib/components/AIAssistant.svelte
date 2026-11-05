@@ -48,7 +48,7 @@ Core (use confidently):
 - React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Git
 
 Used in specific projects:
-- Laravel (FaL360 ERP), Web Crypto API (WhisperBox), Vitest and Playwright (Habit Tracker), Framer Motion (BricksTrade), Svelte (this portfolio)
+- Laravel (FaL360 ERP), Framer Motion (BricksTrade), Svelte (this portfolio)
 
 Learning (MSc / early stage):
 - Python, NumPy, pandas, Matplotlib, scikit-learn
@@ -64,9 +64,8 @@ PROJECTS:
 5. Premium Car Rental — Modern car rental platform with sleek UI, car filtering, and booking flow. Built with HTML, CSS, JavaScript.
 6. Ramadan Companion — Personalized dua journal app with prayer times, fasting progress tracking, and daily curated Islamic content. Built with Next.js and Tailwind.
 7. e-Walk-In Library — Full-stack MERN digital library system with user auth, digital book borrowing, and real-time admin dashboard.
-8. Habit Tracker PWA — Progressive Web App with streak tracking, offline support, local auth. Tested with Vitest and Playwright. Live at hng-stage3-habit-tracker.netlify.app
-9. Invoice Management App — Full-featured invoice manager with CRUD, status filtering (draft/pending/paid), dark mode. Live at hng4-stage2-invoice-app.netlify.app
-10. FaL360 ERP — Enterprise Resource Management system for FaLGates Limited. Laravel, Inertia.js, React. Includes weighbridge operations, stock management, bin locations.
+8. Invoice Management App — Full-featured invoice manager with CRUD, status filtering (draft/pending/paid), dark mode. Live at hng4-stage2-invoice-app.netlify.app
+9. FaL360 ERP — Enterprise Resource Management system for FaLGates Limited. Laravel, Inertia.js, React. Includes weighbridge operations, stock management, bin locations.
 
 RULES:
 - Keep answers to 2-4 sentences

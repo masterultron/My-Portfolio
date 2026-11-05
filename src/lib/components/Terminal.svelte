@@ -44,10 +44,10 @@
       '▸ Frontend  : React, Svelte, Next.js',
       '▸ Styling   : Tailwind, GSAP, Framer',
       '▸ Backend   : Node.js, Laravel',
-      '▸ Database  : PostgreSQL, SQLite',
-      '▸ Security  : Web Crypto API, JWT',
-      '▸ Testing   : Vitest, Playwright',
-      '▸ Tools     : Git, Docker, Vite',
+      '▸ Database  : SQLite',
+      '▸ Security  : JWT',
+      '▸ Testing   : Vitest',
+      '▸ Tools     : Git, Vite',
     ],
     projects: () => [
       '🚀 Projects',
@@ -55,9 +55,8 @@
       '1. WhisperBox — E2EE Messaging App',
       '2. AI Page Summarizer — Chrome Ext',
       '3. Ajoke Gold — Luxury E-Commerce',
-      '4. Habit Tracker — PWA',
-      '5. Invoice App — Management Tool',
-      '6. FaL360 — Enterprise ERP Module',
+      '4. Invoice App — Management Tool',
+      '5. FaL360 — Enterprise ERP Module',
       '',
       'Type "open <number>" to view project',
     ],
@@ -166,7 +165,7 @@
 
     if (base === 'open' && args[0]) {
       const num = parseInt(args[0]);
-      if (num >= 1 && num <= 6) {
+      if (num >= 1 && num <= 5) {
         lines = [...lines, { type: 'success', text: `→ Opening project ${num}...` }];
         setTimeout(() => {
           document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });

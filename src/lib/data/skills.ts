@@ -15,10 +15,6 @@ export const skills: Skill[] = [
   // Backend
   { name: 'Node.js', level: 65, category: 'backend' },
   { name: 'Laravel', level: 60, category: 'backend' },
-  { name: 'PostgreSQL', level: 55, category: 'backend' },
-
-  // Security
-  { name: 'Web Crypto API', level: 45, category: 'security' },
 
     // Tools
   { name: 'Git', level: 90, category: 'tools' },
@@ -26,9 +22,7 @@ export const skills: Skill[] = [
   { name: 'Vite', level: 65, category: 'tools' },         
   { name: 'Vercel', level: 60, category: 'tools' },
   { name: 'Chrome Extensions', level: 50, category: 'tools' }, 
-  { name: 'Docker', level: 45, category: 'tools' },
   { name: 'Vitest', level: 40, category: 'tools' },      
-  { name: 'Playwright', level: 40, category: 'tools' },   
 
   // Machine Learning (MSc, still learning)
   { name: 'Python', level: 55, category: 'ml' },
@@ -39,6 +33,6 @@ export const skills: Skill[] = [
 
 export const techTags = [
   'React', 'Next.js', 'TypeScript', 'JavaScript',
-  'Tailwind CSS', 'Node.js', 'Laravel', 'PostgreSQL', 'WebSockets',
-  'Web Crypto API', 'PWA', 'Chrome Extensions', 'REST APIs', 'Git',
+  'Tailwind CSS', 'Node.js', 'Laravel', 'WebSockets',
+  'PWA', 'Chrome Extensions', 'REST APIs', 'Git',
 ];

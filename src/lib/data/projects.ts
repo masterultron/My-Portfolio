@@ -133,18 +133,6 @@ export const projects: Project[] = [
   },
  
   {
-    id: 'habit-tracker',
-    title: 'Habit Tracker PWA',
-    description: 'Progressive Web App for tracking daily habits with offline support',
-    longDescription: 'A mobile-first PWA built with Next.js featuring local authentication, habit CRUD, streak calculation, and service worker caching for offline use.',
-    tech: ['Next.js', 'TypeScript', 'PWA', 'Vitest', 'Playwright'],
-    category: 'web',
-    live: 'https://abduls-habit-tracker.netlify.app',
-    github: 'https://github.com/masterultron/My-Habit-Tracker',
-    image: '/projects/habit-tracker.png',
-    featured: false,
-  },
-  {
     id: 'invoice-app',
     title: 'Invoice Management App',
     description: 'Full-featured invoice app with CRUD, filtering, and dark mode',

@@ -76,7 +76,6 @@
         >
           <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-3">
-              <span class="text-2xl">{skill.icon}</span>
               <span class="font-semibold text-gray-900 dark:text-white">{skill.name}</span>
             </div>
             <span class="text-sm font-bold text-indigo-500">{skill.level}%</span>
@@ -85,7 +84,7 @@
             <div
               class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000 ease-out"
               style="width: {visible ? skill.level : 0}%"
-            />
+            ></div>
           </div>
         </div>
       {/each}
