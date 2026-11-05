@@ -70,7 +70,7 @@
               id="name"
               type="text"
               bind:value={name}
-              placeholder="Abdurrahaman Jamiu"
+              placeholder="Your name"
               class="w-full px-6 py-5 bg-white dark:bg-slate-950 border-2 rounded-2xl text-lg text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all {errors.name ? 'border-red-400' : 'border-slate-200 dark:border-slate-800'}"
             />
             {#if errors.name}

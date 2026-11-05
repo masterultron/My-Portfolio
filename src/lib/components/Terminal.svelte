@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte';
+  import { projects } from '$lib/data/projects';
 
   interface Line {
     type: 'input' | 'output' | 'error' | 'success';
@@ -52,11 +53,7 @@
     projects: () => [
       '🚀 Projects',
       '──────────────────────────────────────',
-      '1. WhisperBox — E2EE Messaging App',
-      '2. AI Page Summarizer — Chrome Ext',
-      '3. Ajoke Gold — Luxury E-Commerce',
-      '4. Invoice App — Management Tool',
-      '5. FaL360 — Enterprise ERP Module',
+      ...projects.map((p, i) => `${i + 1}. ${p.title}`),
       '',
       'Type "open <number>" to view project',
     ],
@@ -165,7 +162,7 @@
 
     if (base === 'open' && args[0]) {
       const num = parseInt(args[0]);
-      if (num >= 1 && num <= 5) {
+      if (num >= 1 && num <= projects.length) {
         lines = [...lines, { type: 'success', text: `→ Opening project ${num}...` }];
         setTimeout(() => {
           document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
@@ -221,6 +218,7 @@
     } else if (e.key === 'Tab') {
       e.preventDefault();
       const cmds = Object.keys(commands);
+      if (!input) return;
       const match = cmds.find(c => c.startsWith(input.toLowerCase()));
       if (match) input = match;
     }
@@ -260,9 +258,9 @@
       <!-- Title bar -->
       <div class="bg-gray-800 dark:bg-gray-900 px-6 py-4 flex items-center gap-2 border-b border-gray-700">
         <div class="flex gap-2">
-          <div class="w-3.5 h-3.5 rounded-full bg-red-500 shadow-inner" />
-          <div class="w-3.5 h-3.5 rounded-full bg-yellow-500 shadow-inner" />
-          <div class="w-3.5 h-3.5 rounded-full bg-green-500 shadow-inner" />
+          <div class="w-3.5 h-3.5 rounded-full bg-red-500 shadow-inner"></div>
+          <div class="w-3.5 h-3.5 rounded-full bg-yellow-500 shadow-inner"></div>
+          <div class="w-3.5 h-3.5 rounded-full bg-green-500 shadow-inner"></div>
         </div>
         <span class="ml-4 text-gray-400 text-sm font-mono tracking-tight">portfolio — bash</span>
         <span class="ml-auto text-xs text-gray-600 font-mono">1280x720</span>
@@ -289,12 +287,7 @@
 
         <!-- Input line -->
         <div class="flex items-center gap-3 text-indigo-400">
-          <span class="flex-shrink-0">
-            <span class="text-green-400">Abdurrahaman</span>
-            <span class="text-gray-500">@</span>
-            <span class="text-blue-400">portfolio</span>
-            <span class="text-gray-500">:~$</span>
-          </span>
+          <span class="flex-shrink-0"><span class="text-green-400">Abdurrahaman</span><span class="text-gray-500">@</span><span class="text-blue-400">portfolio</span><span class="text-gray-500">:~$</span></span>
           <input
             bind:this={inputEl}
             bind:value={input}

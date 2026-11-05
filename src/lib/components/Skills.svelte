@@ -9,7 +9,13 @@
   let visible = $state(false);
   let activeCategory = $state('all');
 
-  const categories = ['all', 'frontend', 'backend', 'tools'];
+  const categories = [
+    { id: 'all', label: 'All' },
+    { id: 'frontend', label: 'Frontend' },
+    { id: 'backend', label: 'Backend' },
+    { id: 'tools', label: 'Tools' },
+    { id: 'ml', label: 'Machine Learning' },
+  ];
 
   let filteredSkills = $derived(
     activeCategory === 'all' 
@@ -53,14 +59,14 @@
     <div class="flex flex-wrap justify-center gap-3 mb-16">
       {#each categories as cat}
         <button
-          onclick={() => activeCategory = cat}
+          onclick={() => activeCategory = cat.id}
           class="px-8 py-2.5 rounded-full text-sm font-bold capitalize transition-all duration-300 whitespace-nowrap w-max {
-            activeCategory === cat
+            activeCategory === cat.id
               ? 'bg-indigo-600 text-white shadow-xl shadow-indigo-500/25'
               : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:border-indigo-500 border border-gray-200 dark:border-gray-700'
           }"
         >
-          {cat}
+          {cat.label}
         </button>
       {/each}
     </div>

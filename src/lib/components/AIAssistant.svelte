@@ -58,14 +58,16 @@ Used once (this portfolio):
 
 PROJECTS:
 1. BricksTrade Property Developer — Cinematic brochure website for a real-estate developer, with a full-screen crossfade project slideshow, smart-scroll navigation, Framer Motion scroll-reveal animations, and a serverless EmailJS contact form. No backend.
-2. WhisperBox — End-to-end encrypted messaging app. Built with Next.js, RSA-OAEP key exchange, AES-GCM encryption, WebSockets, IndexedDB. The server never sees plaintext messages. Live at hng-whisperbox.netlify.app
+2. WhisperBox — End-to-end encrypted messaging app. Built with Next.js, RSA-OAEP key exchange, AES-GCM encryption, WebSockets, IndexedDB. The server never sees plaintext messages. Live at covert-whisperbox.netlify.app
 3. AI Page Summarizer — Chrome Extension using Manifest V3 that summarizes any webpage using Cohere AI. Has per-URL caching, dark mode, and secure API key storage.
-4. Ajoke Gold International — Serverless e-commerce platform for a UAE-based jewelry brand, built with React, TypeScript, Vite, and Netlify Functions, with no traditional backend server or database. Features a secure PayPal flow with server-side IPN verification, amount cross-checking, and duplicate-transaction detection (Netlify Blobs), retry-safe order notifications via Resend, and multi-currency pricing (AED/USD/NGN). Currently integrating Flutterwave for local payment options. Live at ajoke-gold-international.netlify.app
+4. Ajoke Gold International — Serverless e-commerce platform for a UAE-based jewelry brand, built with React, TypeScript, Vite, and Netlify Functions, with no traditional backend server or database. Features a secure PayPal flow with server-side IPN verification, amount cross-checking, and duplicate-transaction detection (Netlify Blobs), retry-safe order notifications via Resend, and multi-currency pricing (AED/USD/NGN). Currently integrating Flutterwave for local payment options. Live at ajokegoldinternational.com
 5. Premium Car Rental — Modern car rental platform with sleek UI, car filtering, and booking flow. Built with HTML, CSS, JavaScript.
 6. Ramadan Companion — Personalized dua journal app with prayer times, fasting progress tracking, and daily curated Islamic content. Built with Next.js and Tailwind.
 7. e-Walk-In Library — Full-stack MERN digital library system with user auth, digital book borrowing, and real-time admin dashboard.
-8. Invoice Management App — Full-featured invoice manager with CRUD, status filtering (draft/pending/paid), dark mode. Live at hng4-stage2-invoice-app.netlify.app
-9. FaL360 ERP — Enterprise Resource Management system for FaLGates Limited. Laravel, Inertia.js, React. Includes weighbridge operations, stock management, bin locations.
+8. Videography Site — Professional videography portfolio website built with Next.js, React, Tailwind and TypeScript. Live at shot-by-anike.vercel.app
+9. Ejidezee Gold International — Serverless jewelry e-commerce for a UAE-based brand with server-side PayPal IPN verification, Resend order notifications, and a Decap CMS that lets the owner manage a 200+ item catalog. Live at ejidezeegoldinternational.com.ng
+10. Invoice Management App — Full-featured invoice manager with CRUD, status filtering (draft/pending/paid), dark mode. Live at invoice-managment-app.netlify.app
+11. FaL360 ERP — Enterprise Resource Management system for FaLGates Limited. Laravel, Inertia.js, React. Includes weighbridge operations, stock management, bin locations.
 
 RULES:
 - Keep answers to 2-4 sentences
@@ -119,7 +121,9 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
   function getHardcodedAnswer(question: string): string | null {
     const normalized = question.toLowerCase().trim().replace(/[?!.,]/g, '');
     for (const [key, answer] of Object.entries(hardcodedQA)) {
-      if (normalized.includes(key) || key.includes(normalized)) {
+      // Only treat a partial question as a match if it's long enough to be meaningful,
+      // otherwise short inputs like "a" or "is" match an arbitrary canned answer.
+      if (normalized.includes(key) || (normalized.length >= 12 && key.includes(normalized))) {
         return answer;
       }
     }
@@ -297,9 +301,9 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
               🤖
             </div>
             <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl rounded-bl-none px-4 py-3 flex items-center gap-1">
-              <div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0ms" />
-              <div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 150ms" />
-              <div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 300ms" />
+              <div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+              <div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+              <div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
             </div>
           </div>
         {/if}

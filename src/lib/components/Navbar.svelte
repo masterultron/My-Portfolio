@@ -47,7 +47,7 @@
       onclick={(e) => { e.preventDefault(); handleNav('#hero'); }}
       class="text-xl font-bold gradient-text"
     >
-      Abdurrahaman 
+      Abdurrahaman
     </a>
 
     <!-- Desktop Menu -->
@@ -94,9 +94,9 @@
         class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex flex-col items-center justify-center gap-1.5 relative"
         aria-label="Toggle menu"
       >
-        <span class="w-5 h-0.5 bg-slate-700 dark:bg-slate-300 transition-all duration-300 {menuOpen ? 'rotate-45 translate-y-2' : ''}" />
-        <span class="w-5 h-0.5 bg-slate-700 dark:bg-slate-300 transition-all duration-300 {menuOpen ? 'opacity-0' : ''}" />
-        <span class="w-5 h-0.5 bg-slate-700 dark:bg-slate-300 transition-all duration-300 {menuOpen ? '-rotate-45 -translate-y-2' : ''}" />
+        <span class="w-5 h-0.5 bg-slate-700 dark:bg-slate-300 transition-all duration-300 {menuOpen ? 'rotate-45 translate-y-2' : ''}"></span>
+        <span class="w-5 h-0.5 bg-slate-700 dark:bg-slate-300 transition-all duration-300 {menuOpen ? 'opacity-0' : ''}"></span>
+        <span class="w-5 h-0.5 bg-slate-700 dark:bg-slate-300 transition-all duration-300 {menuOpen ? '-rotate-45 -translate-y-2' : ''}"></span>
       </button>
     </div>
   </div>

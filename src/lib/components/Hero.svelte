@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { fly, fade } from 'svelte/transition';
+  import { projects } from '$lib/data/projects';
   import Briefcase from '~icons/lucide/briefcase';
   import GraduationCap from '~icons/lucide/graduation-cap';
   import ShoppingBag from '~icons/lucide/shopping-bag';
@@ -9,8 +10,9 @@
   let visible = $state(false);
   let typewriterText = $state('');
   let canvasEl: HTMLCanvasElement | undefined = $state();
-  let mouseX = $state(0);
-  let mouseY = $state(0);
+  // Start off-canvas so particles aren't repelled from the top-left corner before the mouse moves
+  let mouseX = $state(-1000);
+  let mouseY = $state(-1000);
 
   const roles = [
   'Software Engineer',
@@ -22,6 +24,7 @@
   let roleIndex = 0;
   let charIndex = 0;
   let deleting = false;
+  let typeTimer: ReturnType<typeof setTimeout>;
 
   function typewrite() {
     const current = roles[roleIndex];
@@ -29,7 +32,7 @@
       typewriterText = current.slice(0, ++charIndex);
       if (charIndex === current.length) {
         deleting = true;
-        setTimeout(typewrite, 2000);
+        typeTimer = setTimeout(typewrite, 2000);
         return;
       }
     } else {
@@ -39,7 +42,7 @@
         roleIndex = (roleIndex + 1) % roles.length;
       }
     }
-    setTimeout(typewrite, deleting ? 50 : 90);
+    typeTimer = setTimeout(typewrite, deleting ? 50 : 90);
   }
 
   function initCanvas() {
@@ -82,8 +85,8 @@
 
         if (repel) {
           const force = (120 - dist) / 120;
-          p.vx -= (dx / dist) * force * 2;
-          p.vy -= (dy / dist) * force * 2;
+          p.vx -= (dx / (dist || 1)) * force * 2;
+          p.vy -= (dy / (dist || 1)) * force * 2;
         }
 
         p.vx += (p.ox - p.x) * 0.02;
@@ -135,15 +138,17 @@
 
   onMount(() => {
     visible = true;
-    setTimeout(typewrite, 800);
+    typeTimer = setTimeout(typewrite, 800);
     const cleanup = initCanvas();
-    return cleanup;
+    return () => {
+      clearTimeout(typeTimer);
+      cleanup?.();
+    };
   });
 </script>
 
 <section
   id="hero"
-  role="region"
   aria-label="Interactive Hero Landing"
   class="relative min-h-screen flex items-center overflow-hidden mesh-gradient noise bg-slate-950"
   onmousemove={handleMouseMove}
@@ -155,7 +160,7 @@
   ></canvas>
 
   <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24 pb-12">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-items-center min-h-[80vh]">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-items-center">
 
       <!-- Left: Text content -->
       <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -244,7 +249,7 @@
             class="flex items-center justify-center lg:justify-start gap-8"
           >
             {#each [
-              { value: '7+', label: 'Projects Built' },
+              { value: String(projects.length), label: 'Projects Built' },
               { value: '5', label: 'HNG Stages' },
               { value: '100%', label: 'Passion' },
             ] as stat}

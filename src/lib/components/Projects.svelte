@@ -48,6 +48,8 @@
 
 </script>
 
+<svelte:window onkeydown={(e) => { if (e.key === 'Escape') selectedProject = null; }} />
+
 
 
 <!-- Added 'items-center' and 'text-center' to parent to ensure total centralization -->
@@ -136,7 +138,7 @@
 
             <!-- Subtle Overlay on Hover -->
 
-            <div class="absolute inset-0 bg-indigo-600/0 group-hover:bg-indigo-600/10 transition-colors duration-500" />
+            <div class="absolute inset-0 bg-indigo-600/0 group-hover:bg-indigo-600/10 transition-colors duration-500"></div>
 
           </div>
 
@@ -202,11 +204,21 @@
 
     onclick={() => selectedProject = null}
 
+    onkeydown={(e) => { if (e.key === 'Escape') selectedProject = null; }}
+
     role="dialog"
+
+    aria-modal="true"
+
+    aria-label={selectedProject.title}
+
+    tabindex="-1"
 
     transition:fade={{ duration: 200 }}
 
   >
+
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
 
     <div
 
@@ -214,17 +226,21 @@
 
       onclick={(e) => e.stopPropagation()}
 
+      role="presentation"
+
       transition:fly={{ y: 40, duration: 400 }}
 
     >
 
       <div class="relative h-72 w-full">
 
-        <img src="{base}{selectedProject.image}" alt="" class="w-full h-full object-cover" />
+        <img src="{base}{selectedProject.image}" alt={selectedProject.title} class="w-full h-full object-cover" />
 
         <button
 
             onclick={() => selectedProject = null}
+
+            aria-label="Close project details"
 
             class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md flex items-center justify-center transition-colors text-xl"
 
@@ -254,7 +270,7 @@
 
           {#if selectedProject.live}
 
-            <a href={selectedProject.live} target="_blank" class="flex-1 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-2xl text-center shadow-lg shadow-indigo-500/20 transition-all">
+            <a href={selectedProject.live} target="_blank" rel="noopener noreferrer" class="flex-1 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-2xl text-center shadow-lg shadow-indigo-500/20 transition-all">
 
               Live Demo
 
@@ -264,7 +280,7 @@
 
           {#if selectedProject.github}
 
-            <a href={selectedProject.github} target="_blank" class="flex-1 py-4 border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-2xl text-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+            <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" class="flex-1 py-4 border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-2xl text-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
 
               GitHub
 
