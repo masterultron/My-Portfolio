@@ -132,7 +132,7 @@
       <!-- Social Links -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full max-w-4xl">
         {#each [
-          { label: 'Email', value: 'abdurrahamanjamiu75@outlook.com', href: 'mailto:abdurrahamanjamiu75@outlook.com', icon: Mail },
+          { label: 'Email', value: 'Email me', href: 'mailto:abdurrahamanjamiu75@outlook.com', icon: Mail },
           { label: 'LinkedIn', value: 'LinkedIn', href: 'https://www.linkedin.com/in/abdurrahaman-jamiu-14131524b/', icon: LinkedIn },
           { label: 'Instagram', value: 'Instagram', href: 'https://www.instagram.com/theeabdurrahaman.dev?igsh=M3l2eHIyMWtra2hn&utm_source=qr', icon: Instagram },
           { label: 'GitHub', value: 'GitHub', href: 'https://github.com/masterultron', icon: GitHub },

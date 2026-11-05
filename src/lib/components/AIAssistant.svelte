@@ -40,8 +40,12 @@ EDUCATION:
 
 EXPERIENCE:
 - 2026 to Present: MSc student (Data Science and AI) — Pairing strong frontend engineering with ML to build intelligent, user-facing products.
-- 2024 to Present: Frontend Developer (Freelance and Contract) — Delivering production web solutions for clients, including FaL360 ERP, Ajoke Gold International, and BricksTrade.
-- 2022 to 2024: Frontend Engineer — Built and maintained React-based applications.
+- May 2026 to Present: Freelance Frontend Developer (UAE and Nigerian clients) — Delivering production web solutions, including Ajoke Gold International, Ejidezee Gold International, and BricksTrade.
+- August 2025 to June 2026: Frontend Developer (Frontend Lead), FaLGates Limited, Kaduna, Nigeria — Contract role that ended June 2026. Led frontend development of the FaL360 ERP modules and rebuilt the corporate website in React.
+- February 2025 to August 2025: Web Developer and SEO Optimisation, Luxiar Construction Ltd, Abuja.
+- February 2025 to April 2025: IT Personnel, Hausba, Abuja.
+- January 2024 to August 2024: Lead Front-end Developer, FundusAI, Abuja.
+- October 2023 to February 2024: Engineering Intern, Galaxy Backbone, Abuja.
 
 SKILLS:
 Core (use confidently):
@@ -59,7 +63,7 @@ Used once (this portfolio):
 PROJECTS:
 1. BricksTrade Property Developer — Cinematic brochure website for a real-estate developer, with a full-screen crossfade project slideshow, smart-scroll navigation, Framer Motion scroll-reveal animations, and a serverless EmailJS contact form. No backend.
 2. WhisperBox — End-to-end encrypted messaging app. Built with Next.js, RSA-OAEP key exchange, AES-GCM encryption, WebSockets, IndexedDB. The server never sees plaintext messages. Live at covert-whisperbox.netlify.app
-3. AI Page Summarizer — Chrome Extension using Manifest V3 that summarizes any webpage using Cohere AI. Has per-URL caching, dark mode, and secure API key storage.
+3. AI Page Summarizer — Chrome Extension using Manifest V3 that summarizes any webpage using Google Gemini. Has per-URL caching, dark mode, and secure API key storage.
 4. Ajoke Gold International — Serverless e-commerce platform for a UAE-based jewelry brand, built with React, TypeScript, Vite, and Netlify Functions, with no traditional backend server or database. Features a secure PayPal flow with server-side IPN verification, amount cross-checking, and duplicate-transaction detection (Netlify Blobs), retry-safe order notifications via Resend, and multi-currency pricing (AED/USD/NGN). Currently integrating Flutterwave for local payment options. Live at ajokegoldinternational.com
 5. Premium Car Rental — Modern car rental platform with sleek UI, car filtering, and booking flow. Built with HTML, CSS, JavaScript.
 6. Ramadan Companion — Personalized dua journal app with prayer times, fasting progress tracking, and daily curated Islamic content. Built with Next.js and Tailwind.
@@ -112,10 +116,10 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
     "Ramadan Companion is a personalized dua journal and spiritual companion app built with Next.js and Tailwind CSS. It features dynamic prayer times, fasting progress tracking, and curated daily Islamic content, designed to help users stay connected and informed about their duas and their meanings throughout Ramadan.",
 
     "what is his experience":
-    "Abdurrahaman has worked as a frontend engineer since 2022, then went freelance in 2024, delivering projects like FaL360 ERP and Ajoke Gold International. He's now pursuing an MSc in Data Science and AI at Middlesex University Dubai, pairing frontend skills with ML. Reach out at abdurrahamanjamiu75@outlook.com to discuss working together.",
+    "Abdurrahaman was Frontend Lead at FaLGates Limited in Kaduna on a contract from August 2025 until it ended in June 2026, where he led frontend work on the FaL360 ERP modules. Since May 2026 he has freelanced, delivering projects like Ajoke Gold International and BricksTrade. He's now pursuing an MSc in Data Science and AI at Middlesex University Dubai, pairing frontend skills with ML. Reach out at abdurrahamanjamiu75@outlook.com to discuss working together.",
 
   "what is the ai page summarizer":
-    "AI Page Summarizer is a Manifest V3 Chrome extension that summarizes any webpage using Cohere AI. It has per-URL caching, dark mode, and secure API key storage.",
+    "AI Page Summarizer is a Manifest V3 Chrome extension that summarizes any webpage using Google Gemini. It has per-URL caching, dark mode, and secure API key storage.",
 };
 
   function getHardcodedAnswer(question: string): string | null {
