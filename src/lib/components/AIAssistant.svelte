@@ -11,7 +11,7 @@
   let messages = $state<Message[]>([
     {
       role: 'assistant',
-      content: "Hi! I'm Abdurrahaman's AI assistant 👋 Ask me anything about his skills, projects, or experience.",
+      content: "Hi, I'm Nasibi, Abdurrahaman's AI concierge. Ask me about his projects, skills or experience, in any language you like.",
     },
   ]);
   let loading = $state(false);
@@ -22,6 +22,10 @@
  const hardcodedQA: Record<string, string> = {
   "what are his best projects":
     `Here are Abdurrahaman's standout projects:
+
+- The Solar Sizer: A web app that helps solar installers in Nigeria size systems and quote customers in minutes, built on 10 years of NASA satellite data. It's live and being field-tested with an installer in Kaduna.
+
+- Nasibi (that's me!): A multilingual website concierge for real-estate companies, first used on Aurum Estates, a demo property website. I speak English, Arabic and French there, and I'm being expanded to the world's major languages.
 
 - FaL360 ERP: A full ERP system with multiple modules for FaLGates Limited, built with Laravel, Inertia.js, and React. Features weighbridge operations, stock receipts, and bin management.
 
@@ -34,6 +38,12 @@
 - Ramadan Companion: A personalized dua journal and spiritual companion app with prayer times and fasting progress tracking.
 
 Together they span enterprise systems, e-commerce, a real estate company's online brand presence, encrypted messaging, and spiritual tech, each solving a real problem with production-grade engineering.`,
+
+  "tell me about the solar sizer":
+    "The Solar Sizer helps solar installers in Nigeria size off-grid systems correctly and quote customers in minutes. Installers pick the customer's appliances, and it sizes the panels, batteries and inverter for Kaduna's cloudiest month using 10 years of NASA POWER satellite data, then creates a PDF quote in naira. Try it at the-solar-sizer-ng.streamlit.app.",
+
+  "who is nasibi":
+    "I'm Nasibi, an AI concierge Abdurrahaman built. I was first used on Aurum Estates, a demo luxury property website (not a real company), where I help visitors search homes, answer Golden Visa questions, book viewings and hand over to human agents, in English, Arabic or French. Here on his portfolio, I answer questions about Abdurrahaman.",
 
   "tell me about fal360 erp":
     "FaL360 ERP is a full ERP system with multiple modules built for FaLGates Limited using Laravel, Inertia.js, and React. It covers weighbridge operations, stock receipts, bin management, and more.",
@@ -143,9 +153,9 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
 
   const suggestions = [
     "What are his best projects?",
-    "Tell me about WhisperBox",
+    "Tell me about The Solar Sizer",
     "Is he available for hire?",
-    "What is the Ajoke Gold?",
+    "Who is Nasibi?",
   ];
 </script>
 
@@ -162,12 +172,10 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
       <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-3 flex items-center justify-between flex-shrink-0">
         <!-- Left: avatar + name -->
         <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center text-base leading-none">
-            🤖
-          </div>
+          <span class="nasibi-orb w-8 h-8" aria-hidden="true"></span>
           <div>
-            <p class="text-white font-bold text-sm leading-tight">AI Assistant</p>
-            <p class="text-white/70 text-xs leading-tight">Ask about Abdurrahaman</p>
+            <p class="text-white font-bold text-sm leading-tight">Nasibi</p>
+            <p class="text-white/70 text-xs leading-tight">Abdurrahaman's AI concierge</p>
           </div>
         </div>
 
@@ -177,7 +185,7 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
             onclick={() => {
               messages = [{
                 role: 'assistant',
-                content: "Hi! I'm Abdurrahaman's AI assistant 👋 Ask me anything about his skills, projects, or experience.",
+                content: "Hi, I'm Nasibi, Abdurrahaman's AI concierge. Ask me about his projects, skills or experience, in any language you like.",
               }];
             }}
             class="w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
@@ -209,9 +217,7 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
         {#each messages as msg}
           <div class="flex items-end gap-2 {msg.role === 'user' ? 'justify-end' : 'justify-start'}">
             {#if msg.role === 'assistant'}
-              <div class="w-6 h-6 rounded-md bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center text-xs flex-shrink-0">
-                🤖
-              </div>
+              <span class="nasibi-orb w-6 h-6 flex-shrink-0" aria-hidden="true"></span>
             {/if}
             <div
               class="max-w-[75%] px-3 py-2 text-sm leading-relaxed {
@@ -288,13 +294,22 @@ Together they span enterprise systems, e-commerce, a real estate company's onlin
   <button
     onclick={() => isOpen = !isOpen}
     class="w-14 h-14 bg-gradient-to-br from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-2xl shadow-lg shadow-indigo-500/30 flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 active:scale-95"
-    aria-label="{isOpen ? 'Close' : 'Open'} AI assistant"
+    aria-label="{isOpen ? 'Close' : 'Open'} Nasibi, the AI concierge"
   >
     {#if isOpen}
       <span transition:fade={{ duration: 150 }} class="text-white text-lg">✕</span>
     {:else}
-      <span transition:fade={{ duration: 150 }}>🤖</span>
+      <span transition:fade={{ duration: 150 }} class="flex"><span class="nasibi-orb w-9 h-9" aria-hidden="true"></span></span>
     {/if}
   </button>
 
 </div>
+
+<style>
+  .nasibi-orb {
+    display: inline-block;
+    border-radius: 9999px;
+    background: radial-gradient(circle at 32% 30%, #fff7e6 0%, #f5c27a 28%, #e0708a 62%, #7b4bd6 100%);
+    box-shadow: 0 0 12px rgba(245, 194, 122, 0.55);
+  }
+</style>
