@@ -2,9 +2,16 @@
   import { onMount } from 'svelte';
   import { fly, fade } from 'svelte/transition';
   import { projects } from '$lib/data/projects';
-  import Briefcase from '~icons/lucide/briefcase';
   import GraduationCap from '~icons/lucide/graduation-cap';
   import ShoppingBag from '~icons/lucide/shopping-bag';
+  import Sun from '~icons/lucide/sun';
+  import Award from '~icons/lucide/award';
+
+  const achievements = [
+    'Shortlisted, IRENA Youth Forum 2027, Abu Dhabi',
+    'Selected participant, Porsche Student Innovation Challenge 2026, Dubai',
+    'Participant, KHDA x Lovable Higher Education Hackathon, Dubai Future Week 2026',
+  ];
 
   // Svelte 5 State Runes
   let visible = $state(false);
@@ -16,9 +23,9 @@
 
   const roles = [
   'Software Engineer',
-  'Frontend Engineer',
-  'Creative Developer',
-  'Data Science & AI Student',
+  'AI & Data Science',
+  'Full-Stack Developer',
+  'Founder, The Solar Sizer',
 ];
 
   let roleIndex = 0;
@@ -203,7 +210,7 @@
             in:fly={{ y: 20, duration: 700, delay: 800 }}
             class="text-lg text-slate-400 max-w-lg leading-relaxed mb-10 mx-auto lg:mx-0"
           >
-            I craft immersive web experiences where design meets engineering. I build with React, Next.js, TypeScript, and Tailwind CSS to turn client ideas into fast, polished products that people enjoy using.
+            I build web products and AI-enabled tools, from client e-commerce platforms to The Solar Sizer, a solar sizing tool built on NASA satellite data. I work with React, Next.js, TypeScript and Python, and I'm studying for an MSc in Data Science &amp; AI.
           </p>
 
           <!-- CTAs -->
@@ -259,6 +266,20 @@
               </div>
             {/each}
           </div>
+
+          <!-- Achievements -->
+          <ul
+            in:fade={{ duration: 700, delay: 1400 }}
+            aria-label="Achievements"
+            class="mt-8 flex flex-col gap-2 items-center lg:items-start"
+          >
+            {#each achievements as item}
+              <li class="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 border border-white/10 text-xs md:text-sm text-slate-300">
+                <Award class="w-4 h-4 shrink-0 text-amber-400" />
+                <span>{item}</span>
+              </li>
+            {/each}
+          </ul>
         {/if}
       </div>
 
@@ -270,11 +291,11 @@
         >
           <div class="flex flex-col gap-6 w-96">
             <div class="self-end glass rounded-2xl p-5 w-56 animate-float-slow border border-white/10">
-              <Briefcase class="w-6 h-6 mb-3 text-indigo-400" />
+              <Sun class="w-6 h-6 mb-3 text-amber-400" />
               <div class="text-xs text-slate-400">Featured project</div>
-              <div class="text-base font-bold text-white mt-0.5">FaL360 ERP</div>
+              <div class="text-base font-bold text-white mt-0.5">The Solar Sizer</div>
               <div class="text-xs text-slate-400 mt-1 leading-snug">
-                Enterprise system for FaLGates Limited, built with Laravel, Inertia.js, and React.
+                Solar sizing and quotes for Nigerian installers, built on 10 years of NASA data.
               </div>
             </div>
 

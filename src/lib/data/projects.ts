@@ -12,6 +12,29 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 'solar-sizer',
+    title: 'The Solar Sizer',
+    description: 'Solar sizing and quoting tool for Nigerian installers, built on NASA satellite data',
+    longDescription: 'A web app that helps solar installers in Nigeria size off-grid systems correctly and quote customers in minutes. Installers pick appliances from a 47-item Nigerian catalogue; the app sizes panels, batteries, inverter and charge controller for the worst month using 10 years of NASA POWER satellite data, then generates a PDF quote in naira. A day-by-day simulation over 3,653 days showed that sizing on the sunniest month leaves 13% of demand unmet, against 0.8% for the app\'s design. Now being field-tested with an installer in Kaduna.',
+    tech: ['Python', 'Streamlit', 'pandas', 'NASA POWER API', 'fpdf2', 'Matplotlib'],
+    category: 'tool',
+    live: 'https://the-solar-sizer-ng.streamlit.app/',
+    github: 'https://github.com/masterultron/kaduna-solar-sizer',
+    image: '/projects/solar-sizer.png',
+    featured: true,
+  },
+  {
+    id: 'nasibi',
+    title: 'Nasibi: AI Concierge (Demo Website)',
+    description: 'Multilingual real-estate concierge, first deployed on a demo property website',
+    longDescription: 'Nasibi is a website concierge for real-estate companies. It was first built and used on Aurum Estates, a demo luxury property website (not a real company). It speaks English, Arabic (full right-to-left layout) and French, helps visitors search properties, answers Golden Visa questions, books viewings, captures leads and hands conversations to human agents through an agent inbox. Next: support for the world\'s major languages and a multi-tenant LLM service with tool use and streamed replies, so it can be embedded on any client site.',
+    tech: ['JavaScript', 'Three.js', 'HTML', 'CSS', 'i18n / RTL'],
+    category: 'web',
+    live: 'https://legacy-property-demo-site.netlify.app/',
+    image: '/projects/nasibi.png',
+    featured: true,
+  },
 
   {
     id: 'brickstrade',
@@ -63,18 +86,6 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    id: 'Videography-Site',
-    title: 'Videography Site',
-    description: 'Professional videography portfolio website',
-    longDescription: 'A modern, responsive website for a professional videographer to showcase their work, services, and contact information.',
-    tech: ['Next.js', 'React', 'Tailwind', 'TypeScript'],
-    category: 'web',
-    live: 'https://shot-by-anike.vercel.app/',
-    github: 'https://github.com/masterultron/VideographySite',
-    image: '/projects/videography-site.png',
-    featured: false,
-  },
-  {
     id: 'ai-summarizer',
     title: 'AI Page Summarizer',
     description: 'Chrome extension that summarizes any webpage using AI',
@@ -97,17 +108,6 @@ export const projects: Project[] = [
     featured: true,
   },
    {
-    id: 'walk-in-library',
-    title: 'e-Walk-In Library',
-    description: 'Full-stack digital library management and reading system',
-    longDescription: 'A robust MERN stack application for digital book management. Features secure user authentication, digital resource borrowing, and a real-time admin dashboard for inventory.',
-    tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Tailwind'],
-    category: 'fullstack',
-    github: 'https://github.com/masterultron/e-Walk-In-Library',
-    image: '/projects/library.png',
-    featured: true,
-  },
-   {
     id: 'ramadan-companion',
     title: 'My Ramadan Companion',
     description: 'Personalized dua journal to help you stay connected and know your duas and the meanings during ramadan.',
@@ -118,31 +118,6 @@ export const projects: Project[] = [
     github: 'https://github.com/masterultron/my-ramadan-companion',
     image: '/projects/ramadan.png',
     featured: true,
-  },
-  {
-    id: 'car-rental',
-    title: 'Premium Car Rental',
-    description: 'Modern car rental platform with sleek UI and booking flow',
-    longDescription: 'A high-performance landing page and booking system for a luxury car rental service. Features responsive design, car filtering, and a seamless reservation user experience.',
-    tech: ['HTML', 'CSS', 'JavaScript'],
-    category: 'web',
-    live: 'https://abdulscarrentalwebsite.netlify.app',
-    github: 'https://github.com/masterultron/car-rental',
-    image: '/projects/rental.png',
-    featured: true,
-  },
- 
-  {
-    id: 'invoice-app',
-    title: 'Invoice Management App',
-    description: 'Full-featured invoice app with CRUD, filtering, and dark mode',
-    longDescription: 'A responsive invoice management application with create/edit/delete functionality, status filtering, draft system, and persistent localStorage.',
-    tech: ['React', 'TypeScript', 'Tailwind', 'localStorage'],
-    category: 'web',
-    live: 'https://invoice-managment-app.netlify.app',
-    github: 'https://github.com/masterultron/Invoice-app',
-    image: '/projects/invoice-app.png',
-    featured: false,
   },
 
 ];

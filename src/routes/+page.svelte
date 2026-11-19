@@ -10,10 +10,10 @@
 </script>
 
 <svelte:head>
-  <title>Abdurrahaman Jamiu — Frontend Engineer</title>
-  <meta name="description" content="Frontend engineer building immersive web experiences with React, Svelte, and modern tools." />
-  <meta property="og:title" content="Abdurrahaman Jamiu — Frontend Engineer" />
-  <meta property="og:description" content="Portfolio of a Frontend Engineer specializing in React, Svelte, and modern web technologies." />
+  <title>Abdurrahaman Jamiu — Software Engineer, AI &amp; Data Science</title>
+  <meta name="description" content="Software engineer building web products and AI-enabled tools, including The Solar Sizer. React, Next.js, TypeScript and Python." />
+  <meta property="og:title" content="Abdurrahaman Jamiu — Software Engineer, AI &amp; Data Science" />
+  <meta property="og:description" content="Portfolio of Abdurrahaman Jamiu, a software engineer working across full-stack web development, AI and data science." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />

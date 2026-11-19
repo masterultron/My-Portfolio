@@ -33,11 +33,11 @@
       'About Me',
       '──────────────────────────────────────',
       'Name    : Abdurrahaman Jamiu',
-      'Title   : Frontend Engineer',
+      'Title   : Software Engineer (AI & Data Science)',
       'Location: Dubai, UAE',
       'Status  : Available for work ',
       '',
-      'I build immersive web experiences with modern tools. Passionate about performance, accessibility, security, and beautiful UIs.',
+      'I build web products and AI-enabled tools, from client e-commerce to The Solar Sizer. Studying for an MSc in Data Science & AI.',
     ],
     skills: () => [
       '⚡ Tech Stack',
@@ -49,6 +49,7 @@
       '▸ Security  : JWT',
       '▸ Testing   : Vitest',
       '▸ Tools     : Git, Vite',
+      '▸ Data & AI : Python, pandas, Streamlit, Gemini API',
     ],
     projects: () => [
       '🚀 Projects',
